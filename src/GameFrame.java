@@ -45,13 +45,13 @@ public class GameFrame extends JFrame {
             buttons[i].setCursor(new Cursor(Cursor.HAND_CURSOR));
         }
 
-        // ✅ Label awal: giliran player
+        
         lblStatus = new JLabel("Giliran kamu (X) — Kamu duluan!", SwingConstants.CENTER);
         lblStatus.setFont(new Font("Arial", Font.BOLD, 15));
         lblStatus.setForeground(new Color(34, 139, 34));
 
-        btnNewGame  = new JButton("🔄 Game Baru");
-        btnBackMenu = new JButton("🏠 Menu Utama");
+        btnNewGame  = new JButton("Game Baru");
+        btnBackMenu = new JButton("Menu Utama");
     }
 
     private void setupLayout() {
@@ -174,17 +174,17 @@ public class GameFrame extends JFrame {
         if (result.equals("WIN")) {
             pesan = "🎉 Selamat! Kamu MENANG!\n+10 poin ditambahkan.";
             judul = "Menang!"; icon = JOptionPane.INFORMATION_MESSAGE;
-            lblStatus.setText("🎉 Kamu MENANG!");
+            lblStatus.setText("Kamu MENANG!");
             lblStatus.setForeground(new Color(34, 139, 34));
         } else if (result.equals("LOSE")) {
-            pesan = "😞 Kamu KALAH! Komputer menang.\n+0 poin.";
+            pesan = "Kamu KALAH! Komputer menang.\n+0 poin.";
             judul = "Kalah"; icon = JOptionPane.ERROR_MESSAGE;
-            lblStatus.setText("😞 Kamu KALAH!");
+            lblStatus.setText("Kamu KALAH!");
             lblStatus.setForeground(new Color(178, 34, 34));
         } else {
-            pesan = "🤝 SERI! Tidak ada pemenang.\n+3 poin ditambahkan.";
+            pesan = "SERI! Tidak ada pemenang.\n+3 poin ditambahkan.";
             judul = "Seri"; icon = JOptionPane.WARNING_MESSAGE;
-            lblStatus.setText("🤝 Permainan SERI!");
+            lblStatus.setText("Permainan SERI!");
             lblStatus.setForeground(new Color(218, 165, 32));
         }
         JOptionPane.showMessageDialog(this, pesan, judul, icon);
@@ -200,11 +200,11 @@ public class GameFrame extends JFrame {
             buttons[i].setBackground(Color.WHITE);
         }
 
-        // ✅ Reset: player jalan duluan lagi
+        
         lblStatus.setText("Giliran kamu (X) — Kamu duluan!");
         lblStatus.setForeground(new Color(34, 139, 34));
 
-        // Tidak ada Timer komputer — tunggu klik player
+
     }
 
     private void goToMainMenu() {
