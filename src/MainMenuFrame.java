@@ -82,7 +82,7 @@ public class MainMenuFrame extends JFrame {
 
     
     private void setupEventHandlers() {
-        // Mulai Game
+        
         btnStartGame.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GameFrame gameFrame = new GameFrame(currentPlayer);
@@ -91,7 +91,7 @@ public class MainMenuFrame extends JFrame {
             }
         });
 
-        // Lihat Statistik Pribadi
+        
         btnStatistics.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 StatisticsFrame statsFrame = new StatisticsFrame(currentPlayer);
@@ -99,7 +99,7 @@ public class MainMenuFrame extends JFrame {
             }
         });
 
-        // Lihat Top 5 Pemain
+        
         btnTopScorers.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 TopScorersFrame topFrame = new TopScorersFrame();
@@ -107,7 +107,7 @@ public class MainMenuFrame extends JFrame {
             }
         });
 
-        // Keluar dari aplikasi
+        
         btnExit.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int confirm = JOptionPane.showConfirmDialog(
@@ -123,7 +123,7 @@ public class MainMenuFrame extends JFrame {
         });
     }
 
-    /** Memperbarui label selamat datang (dipanggil setelah refresh player). */
+    
     public void updateWelcomeLabel() {
         lblWelcome.setText("Halo, " + currentPlayer.getUsername() + "!");
     }

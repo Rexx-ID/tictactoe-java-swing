@@ -63,7 +63,7 @@ public class LoginFrame extends JFrame {
 
         mainPanel.add(formPanel, BorderLayout.CENTER);
 
-        // Panel tombol
+        
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         btnLogin.setPreferredSize(new Dimension(120, 35));
         btnLogin.setFont(new Font("Arial", Font.BOLD, 13));
@@ -122,7 +122,7 @@ public class LoginFrame extends JFrame {
             );
             MainMenuFrame menuFrame = new MainMenuFrame(player);
             menuFrame.setVisible(true);
-            this.dispose(); // tutup jendela login
+            this.dispose(); 
         } else {
             
             JOptionPane.showMessageDialog(

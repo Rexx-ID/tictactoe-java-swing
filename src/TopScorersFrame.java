@@ -24,7 +24,7 @@ public class TopScorersFrame extends JFrame {
     }
 
     private void initComponents() {
-        setTitle("🏆 Top 5 Pemain");
+        setTitle("Top 5 Pemain");
         setSize(500, 380);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -49,15 +49,15 @@ public class TopScorersFrame extends JFrame {
         table.setGridColor(new Color(200, 200, 200));
         table.setShowGrid(true);
 
-        // Atur lebar kolom
-        table.getColumnModel().getColumn(0).setPreferredWidth(30);  // #
-        table.getColumnModel().getColumn(1).setPreferredWidth(150); // Username
-        table.getColumnModel().getColumn(2).setPreferredWidth(70);  // Menang
-        table.getColumnModel().getColumn(3).setPreferredWidth(60);  // Kalah
-        table.getColumnModel().getColumn(4).setPreferredWidth(50);  // Seri
-        table.getColumnModel().getColumn(5).setPreferredWidth(70);  // Skor
+        
+        table.getColumnModel().getColumn(0).setPreferredWidth(30);  
+        table.getColumnModel().getColumn(1).setPreferredWidth(150); 
+        table.getColumnModel().getColumn(2).setPreferredWidth(70);  
+        table.getColumnModel().getColumn(3).setPreferredWidth(60);  
+        table.getColumnModel().getColumn(4).setPreferredWidth(50);  
+        table.getColumnModel().getColumn(5).setPreferredWidth(70);  
 
-        // Rata tengah semua kolom
+        
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
         for (int i = 0; i < table.getColumnCount(); i++) {
@@ -72,18 +72,18 @@ public class TopScorersFrame extends JFrame {
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
 
-        // Header
-        JLabel lblTitle = new JLabel("🏆  Top 5 Pemain Terbaik", SwingConstants.CENTER);
+        
+        JLabel lblTitle = new JLabel("Top 5 Pemain Terbaik", SwingConstants.CENTER);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 18));
         lblTitle.setForeground(new Color(218, 165, 32));
         mainPanel.add(lblTitle, BorderLayout.NORTH);
 
-        // Tabel
+        
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBorder(BorderFactory.createLineBorder(new Color(30, 100, 200), 2));
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
-        // Tombol bawah
+        
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
         styleButton(btnRefresh, new Color(34, 139, 34));
         styleButton(btnClose,   new Color(70, 130, 180));
@@ -118,11 +118,9 @@ public class TopScorersFrame extends JFrame {
         });
     }
 
-    /**
-     * Mengambil data Top 5 dari database dan mengisi tabel.
-     */
+    
     private void loadTopScorers() {
-        // Kosongkan baris tabel dulu
+        
         tableModel.setRowCount(0);
 
         ArrayList<Player> topList = playerService.getTopFiveScorers();
@@ -137,7 +135,7 @@ public class TopScorersFrame extends JFrame {
             return;
         }
 
-        // Tambahkan setiap pemain ke tabel
+        
         int rank = 1;
         for (Player p : topList) {
             Object[] row = {

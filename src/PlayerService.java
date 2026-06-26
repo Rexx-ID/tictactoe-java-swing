@@ -85,7 +85,7 @@ public class PlayerService {
             additionalScore = 3;
             sql = "UPDATE players SET draws = draws + 1, score = score + ? WHERE id = ?";
         } else {
-            return; // result tidak dikenal, abaikan
+            return; 
         }
 
         try {

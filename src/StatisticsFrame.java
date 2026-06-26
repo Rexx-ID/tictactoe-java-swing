@@ -46,8 +46,8 @@ public class StatisticsFrame extends JFrame {
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
 
-        // Header
-        JLabel lblTitle = new JLabel("📊 Statistik Saya", SwingConstants.CENTER);
+        
+        JLabel lblTitle = new JLabel("Statistik Saya", SwingConstants.CENTER);
         lblTitle.setFont(new Font("Arial", Font.BOLD, 20));
         lblTitle.setForeground(new Color(30, 100, 200));
 
@@ -60,18 +60,18 @@ public class StatisticsFrame extends JFrame {
         headerPanel.add(lblName);
         mainPanel.add(headerPanel, BorderLayout.NORTH);
 
-        // Panel statistik
+        
         JPanel statsPanel = new JPanel(new GridLayout(4, 2, 10, 15));
         statsPanel.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
 
-        addStatRow(statsPanel, "✅  Menang :",  lblWins,   new Color(34, 139, 34));
-        addStatRow(statsPanel, "❌  Kalah  :",  lblLosses, new Color(178, 34, 34));
-        addStatRow(statsPanel, "🤝  Seri   :",  lblDraws,  new Color(218, 165, 32));
-        addStatRow(statsPanel, "⭐  Skor   :",  lblScore,  new Color(70, 130, 180));
+        addStatRow(statsPanel, "Menang :",  lblWins,   new Color(34, 139, 34));
+        addStatRow(statsPanel, "Kalah  :",  lblLosses, new Color(178, 34, 34));
+        addStatRow(statsPanel, "Seri   :",  lblDraws,  new Color(218, 165, 32));
+        addStatRow(statsPanel, "Skor   :",  lblScore,  new Color(70, 130, 180));
 
         mainPanel.add(statsPanel, BorderLayout.CENTER);
 
-        // Tombol tutup
+        
         JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         styleButton(btnClose, new Color(70, 130, 180));
         btnClose.setPreferredSize(new Dimension(120, 35));
@@ -81,7 +81,7 @@ public class StatisticsFrame extends JFrame {
         add(mainPanel);
     }
 
-    /** Helper menambah baris label statistik. */
+    
     private void addStatRow(JPanel panel, String labelText, JLabel valueLabel, Color color) {
         JLabel lbl = new JLabel(labelText);
         lbl.setFont(new Font("Arial", Font.BOLD, 14));
