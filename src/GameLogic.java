@@ -23,7 +23,7 @@ public class GameLogic {
         board = new GameBoard();
     }
 
-    /** Mereset papan untuk game baru. */
+
     public void resetBoard() {
         board.reset();
     }
@@ -34,7 +34,7 @@ public class GameLogic {
             return false;
         }
         if (!board.isEmpty(index)) {
-            return false; // sel sudah terisi
+            return false; 
         }
         board.setCell(index, symbol);
         return true;
@@ -67,18 +67,18 @@ public class GameLogic {
 
 
     public int computerMove() {
-        // 1. Coba menang
+        
         int winMove = findBestMove('O');
         if (winMove != -1) return winMove;
 
-        // 2. Blok pemain
+        
         int blockMove = findBestMove('X');
         if (blockMove != -1) return blockMove;
 
-        // 3. Ambil tengah
+        
         if (board.isEmpty(4)) return 4;
 
-        // 4. Ambil sudut acak
+        
         int[] corners = {0, 2, 6, 8};
         ArrayList<Integer> freeCorners = new ArrayList<>();
         for (int c : corners) {
@@ -89,7 +89,7 @@ public class GameLogic {
             return freeCorners.get(rnd.nextInt(freeCorners.size()));
         }
 
-        // 5. Sel kosong mana saja
+        
         ArrayList<Integer> freeCells = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             if (board.isEmpty(i)) freeCells.add(i);
@@ -99,19 +99,17 @@ public class GameLogic {
             return freeCells.get(rnd.nextInt(freeCells.size()));
         }
 
-        return -1; // tidak ada sel kosong
+        return -1; 
     }
 
-    /**
-     * Mencari gerakan terbaik untuk simbol tertentu (menang atau blok).
-     */
+    
     private int findBestMove(char symbol) {
         for (int[] pattern : WIN_PATTERNS) {
             int a = pattern[0];
             int b = pattern[1];
             int c = pattern[2];
 
-            // Cek apakah 2 sel terisi simbol dan 1 sel kosong
+            
             if (board.getCell(a) == symbol && board.getCell(b) == symbol && board.isEmpty(c)) return c;
             if (board.getCell(a) == symbol && board.getCell(c) == symbol && board.isEmpty(b)) return b;
             if (board.getCell(b) == symbol && board.getCell(c) == symbol && board.isEmpty(a)) return a;
@@ -119,7 +117,7 @@ public class GameLogic {
         return -1;
     }
 
-    /** Mengembalikan objek GameBoard. */
+    
     public GameBoard getBoard() {
         return board;
     }
