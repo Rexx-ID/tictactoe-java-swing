@@ -85,8 +85,8 @@ komponen JTable. Data diambil dari database melalui getTopFiveScorers()
 dan dimasukkan baris per baris ke DefaultTableModel. Tabel menampilkan
 kolom ranking, username, menang, kalah, seri, dan skor.
 ## Screenshots
-    ![Login Window](Screenshots/login-window.png)
-    ![Game Window](Screenshots/game-window.png)
-    ![Top 5 Scorers](Screenshots/top-scorers-window.png)
+![Login Window](Screenshots/login-window.png)
+![Game Window](Screenshots/game-window.png)
+![Top 5 Scorers](Screenshots/top-scorers-window.png)
 ## Video Link
 YouTube:
