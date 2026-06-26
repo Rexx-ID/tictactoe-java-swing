@@ -1,3 +1,4 @@
+package src;
 
 public class GameBoard {
     private char[] board;
