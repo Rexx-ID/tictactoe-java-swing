@@ -89,4 +89,4 @@ kolom ranking, username, menang, kalah, seri, dan skor.
 ![Game Window](Screenshots/game-window.png)
 ![Top 5 Scorers](Screenshots/top-scorers-window.png)
 ## Video Link
-YouTube:
+YouTube: https://youtu.be/HHm7LpON0y0
