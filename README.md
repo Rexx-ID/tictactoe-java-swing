@@ -1,8 +1,8 @@
 # Simple Tic-Tac-Toe Game with Java Swing, Login, and Statistics
 ## Student Information
-Name:
-Student ID:
-Class:
+Name:Fayyadh Satria Utama
+Student ID:5026251155
+Class:A
 ## Project Description
 This project is a simple Tic-Tac-Toe game built using Java Swing.
 The application includes login, game statistics, and Top 5 scorer
